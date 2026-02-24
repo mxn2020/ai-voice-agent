@@ -1,56 +1,94 @@
-# AI Voice Agent / Virtual Receptionist
+# AI Voice Agent
 
-## Pages & Features
+AI-powered virtual receptionist and voice interaction platform.
 
-### 1. Dashboard
-- Total calls handled today / this week
-- Missed call & voicemail count
-- Average call duration & resolution rate
-- Top call reasons breakdown
-- Live status (AI agent active / offline)
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
 
-### 2. Call Handling
-- Incoming call flow with AI greeting
-- Caller intent detection & smart routing
-- Appointment scheduling via voice
-- FAQ answering from knowledge base
-- Transfer to human with context summary
+## Tech Stack
 
-### 3. Voice & Persona
-- Select voice type (male / female / neutral)
-- Language & accent settings
-- Tone configuration (professional, friendly, casual)
-- Custom greeting & hold messages
-- Brand-specific vocabulary
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
 
-### 4. Conversation Scripts
-- Visual script builder with decision trees
-- Common scenario templates (booking, inquiry, complaint)
-- Dynamic variable insertion (caller name, company)
-- Fallback & error recovery paths
+## Getting Started
 
-### 5. Voicemail & Messages
-- AI-transcribed voicemail inbox
-- Priority tagging & categorization
-- Auto-forward summaries via email / SMS
-- Listen & playback controls
+```bash
+npm install
+cp .env.example .env.local
+# Set VITE_CONVEX_URL to your deployment URL
+npm run dev
+```
 
-### 6. Directory & Routing
-- Company directory with extension mapping
-- Department-based routing rules
-- VIP caller recognition & priority routing
-- After-hours & weekend routing
+## License
 
-### 7. Analytics & Reports
-- Call volume by time of day & day of week
-- Resolution vs. transfer rate
-- Caller satisfaction rating
-- Top intents & missed intents
-- Export as PDF / CSV
+MIT © Mehdi Nabhani
 
-### 8. Settings
-- Phone number assignment
-- Business hours configuration
-- Voicemail greeting customization
-- Integration settings (calendar, CRM)
-- Notification preferences
+---
+
+<details>
+<summary>📋 Original Feature Spec</summary>
+
+# {{APP_TITLE}}
+
+{{APP_DESCRIPTION}}
+
+Part of [The Mehdi Verse](https://github.com/mxn2020) — a collection of open-source sample applications.
+
+## Tech Stack
+
+- **Frontend**: React 19 + TypeScript + Vite
+- **Backend**: [Shared Convex deployment](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+- **Auth**: Email/password via `@convex-dev/auth`
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js 22+
+- A running [shared Convex backend](https://github.com/mxn2020/the-mehdi-verse-convex-backend)
+
+### Setup
+
+```bash
+# Install dependencies
+npm install
+
+# Create .env.local with your Convex URL
+cp .env.example .env.local
+# Edit .env.local and set VITE_CONVEX_URL to your deployment URL
+
+# Start the dev server
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173) to view the app.
+
+## Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run typecheck` | Run TypeScript type checking |
+
+## Project Structure
+
+```
+src/
+  main.tsx              # Entry point with ConvexAuthProvider
+  App.tsx               # Auth routing (Landing vs Dashboard)
+  App.css               # Component styles
+  index.css             # Global styles & design tokens
+  components/
+    Landing.tsx          # Marketing/landing page
+    SignIn.tsx           # Auth form (sign-in/sign-up)
+    Dashboard.tsx        # Authenticated app shell
+api.ts                   # Convex API types (from shared backend)
+```
+
+## License
+
+MIT © Mehdi Nabhani
+
+</details>
